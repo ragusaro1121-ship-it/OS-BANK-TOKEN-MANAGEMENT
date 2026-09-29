@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OS Bank Token Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>OS Bank Token Management System</h1>
+
+    <div class="card">
+      <h2>Add Customer</h2>
+      <form id="tokenForm">
+        <input id="name" type="text" placeholder="Customer Name" required>
+        <input id="account" type="text" placeholder="Account Number" required>
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option>Deposit</option>
+          <option>Withdrawal</option>
+          <option>Account Opening</option>
+          <option>Loan Enquiry</option>
+        </select>
+        <button type="submit">Generate Token</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Customer Queue</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Token</th><th>Name</th><th>Account</th><th>Service</th><th>Status</th><th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="queue"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
